@@ -9,13 +9,12 @@ while (true)
         break;
     Console.WriteLine("Ошибка ввода, попробуй еще раз");
 }
-
-if (usernum / 10 < 10 && usernum / 10 > -10)
+int a = Math.Abs(usernum);
+if (a / 10 < 10)
     Console.WriteLine($"в числе {usernum} нет третьего числа");
 
 else
 {
-    int a = usernum;
     if (a > 0)
     {
         while (a > 999)
@@ -23,15 +22,6 @@ else
             a = a / 10;
         }
     }
-    if (a < 0)
-    {
-        a = a * -1;
-        while (a > 999)
-        {
-            a = a / 10;
-        }
-    }
-
     a = a % 10;
 
     Console.Write($"в твоём числе {usernum} третья цифра это {a}");
